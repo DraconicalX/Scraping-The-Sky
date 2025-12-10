@@ -15,7 +15,7 @@ class Player{
     inventory = [new inventorySlot("Accessory"),new inventorySlot("Accessory")]
     tester = loadImage("Iridescent Pearl.png")
     
-    inventory[1].addItem(new Item("Accessory","Iridescent Pearl",tester))
+    // inventory[1].addItem(new Item("Accessory","Iridescent Pearl",tester))
     
     movement = new aheadApproach()
   }

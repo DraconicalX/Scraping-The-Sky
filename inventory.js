@@ -38,6 +38,7 @@ class inventorySlot{
           playerStats.DMG=min((playerStats.DMG*2.25),350)
           playerStats.MNC=min((playerStats.MNC*2.25),350)
           playerStats.MNR=min((playerStats.MNR*2.25),350)
+          return playerStats
           break;
       case ""
     }

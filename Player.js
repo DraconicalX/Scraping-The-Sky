@@ -53,7 +53,7 @@ class Player{
   }
   move(){
     this.stats=stats
-    this.stats = accessoryEffects(this.stats)
+    this.stats = inventory.accessoryEffects(this.stats)
     movement.setAvgs();
       if(keyIsDown(RIGHT_ARROW)){
         this.direc='R'

@@ -40,7 +40,6 @@ class inventorySlot{
           playerStats.MNR=min((playerStats.MNR*2.25),350)
           return playerStats
           break;
-      case ""
     }
   }
 }

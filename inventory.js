@@ -28,4 +28,16 @@ class inventorySlot{
   getItemIn(){
     return(this.item)
   }
+  accessoryEffects(playerStats){
+    switch (this.item){
+      case "Iridescent Pearl":
+          playerStats.HPC=min((playerStats.HPC*2.25),350)
+          playerStats.HPR=min((playerStats.HPR*2.25),350)
+          playerStats.DEF=min((playerStats.DEF*2.25),350)
+          playerStats.SPD=min((playerStats.SPD*2.25),350)
+          playerStats.DMG=min((playerStats.DMG*2.25),350)
+          playerStats.MNC=min((playerStats.MNC*2.25),350)
+          playerStats.MNR=min((playerStats.MNR*2.25),350)
+    }
+  }
 }

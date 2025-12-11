@@ -58,20 +58,20 @@ function draw() {
     player.display()
     player.move();   
     player.attack();
-    enemy.takeHit(player.x,player.y,player.hitRadius)
-    player.withdraw();
-    enemy.display(player.x,player.y)
-    enemy.move(player.x,player.y)
-    if(enemy.hit){
-      player.takeHit(enemy.stats.DMG)
+    for(i=0; i<enemy.length; i++){
+      enemy.takeHit(player.x,player.y,player.hitRadius)
+      player.withdraw();
+      enemy.display(player.x,player.y)
+      enemy.move(player.x,player.y)
+      if(enemy.hit){
+        player.takeHit(enemy.stats.DMG)
+      }
+      if(player.stats.HP<=0){
+        console.log("Game has ended!")
+        exit(0)
+      }
+      enemy.hit=false
     }
-    if(player.stats.HP<=0){
-      console.log("Game has ended!")
-      exit(0)
-    }
-    enemy.hit=false
-    console.log(enemy.stats.DMG)
-    console.log(player.stats.HP)
     image(Health,width/2-200,0,400*stats.HP/stats.HPC,22.8571428571*2)
     image(Healthbar,width/2-200,0,400,22.8571428571*2)
   }

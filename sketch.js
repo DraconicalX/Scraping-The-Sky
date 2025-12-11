@@ -26,7 +26,7 @@ function preload(){
   PlayerX = 0
   PlayerY = 0;
   player = new Player();
-  enemy = new Enemy();
+  enemy = [new Enemy(),new Enemy()];
   Health = loadImage("Health.png")
   Healthbar = loadImage("Healthbar.png")
 }

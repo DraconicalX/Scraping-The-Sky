@@ -64,7 +64,7 @@ function draw() {
       enemy[i].display(player.x,player.y)
       enemy[i].move(player.x,player.y)
       if(enemy[i].hit){
-        player.takeHit(enemy.stats.DMG)
+        player.takeHit(enemy[i].stats.DMG)
       }
       if(player.stats.HP<=0){
         console.log("Game has ended!")

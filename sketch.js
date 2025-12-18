@@ -38,7 +38,7 @@ function preload(){
   Credits = loadImage("creditButton.png")
 }
 function setup() {
-  createCanvas(1470, 956);
+  createCanvas(1470, 900);
   Music.loop()
 }
 

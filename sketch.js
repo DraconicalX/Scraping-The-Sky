@@ -14,6 +14,7 @@ var Y
 var Healthbar
 var Health
 var Credits
+var creditShow
 function preload(){
   BeginningScreen = loadImage("Skyscraper.png")
   Texts = []
@@ -36,6 +37,7 @@ function preload(){
   Health = loadImage("Health.png")
   Healthbar = loadImage("Healthbar.png")
   Credits = loadImage("creditButton.png")
+  creditShow = false
 }
 function setup() {
   createCanvas(1470, 900);
@@ -56,6 +58,12 @@ function draw() {
     if(AnimTimer>150){
       image(Texts[2],width/2.7,height/1.55,400,200)
       image(Credits,width-500,height-325,500,500)
+      if(mouseIsPressed && mouseX>=width-500,mouseY>=height-75){
+        creditShow = true
+      }
+      if(creditShow){
+        text("hi",width/2,height/2)
+      }
     }
   }else{
     image(FloorImg,-player.x,-player.y,width*4,width*2)

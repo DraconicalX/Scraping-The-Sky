@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js">    </script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+    
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.23">
+  </head>
+  <body>
+    <main>
+    </main>
+    <!--<button onclick="openSketchInNewTab()">Open Sketch in new tab</button>-->
+    <script src="imageLoader.js"></script>
+    <script src="sketch.js"></script>
+    <script src="stats.js"></script>
+    <script src="item.js"></script>
+    <script src="inventory.js"></script>
+    <script src="Accs.js"></script>
+    <script src="Player.js"></script>
+    <script src="Enemy.js"></script>
+    <script src="MovementClasses.js"></script>
+    <script>
+      document.title = "Scraping The Sky";
+      function setFavicon(url) {
+        let link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+          link = document.createElement('link');
+          link.rel = 'icon';
+          document.head.appendChild(link);
+        }
+      link.href = url;
+    }
+      function openSketchInNewTab() {
+          window.open(window.location.href, '_blank');
+      }
+    </script>
+  </body>
+</html>
